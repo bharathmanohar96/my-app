@@ -5,7 +5,6 @@ pipeline {
     stage('Maven Build') {
       steps {
         sh "echo jenkins demo"
-        sh "hari"
       } 
     }
   }

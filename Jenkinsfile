@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label "linux-2-slave"
+  }
 
   stages {
     stage('Maven Build') {

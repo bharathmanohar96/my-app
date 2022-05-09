@@ -8,7 +8,7 @@ pipeline {
         sh "echo the job URL $JOB_URL"
       } 
     }
-     Stage('tomcat deploy') {
+     stage('tomcat deploy') {
         steps {
           sshagent(['tomcat-deploy']) {
             sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.46.77:/home/ec2-user/tomcat8/webapps/app.war'

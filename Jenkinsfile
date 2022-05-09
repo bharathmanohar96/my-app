@@ -12,7 +12,7 @@ pipeline {
           sshagent(['tomcat-deploy']) {
             sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.46.77:/home/ec2-user/tomcat8/webapps/app.war'
             sh 'ssh ec2-user@172.31.46.77 /home/ec2-user/tomcat8/bin/shutdown.sh'
-            sh 'ssh ec2-user@172.31.46.77 /home/ec2-user/tomcat8/bin/shartup.sh'
+            sh 'ssh ec2-user@172.31.46.77 /home/ec2-user/tomcat8/bin/startup.sh'
         }
       }
     }

@@ -18,13 +18,13 @@ pipeline {
     }
   }
   post {
-  success {
-    echo "this is success"
-  }
-  failure {
-    echo "this is failure"
-  }
-}
+      success {
+        echo "this is success"
+      }
+      failure {
+        echo "this is failure"
+      }
+    }
   options {
       buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '30', numToKeepStr: '4')
   }

@@ -29,3 +29,4 @@ pipeline {
       buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '30', numToKeepStr: '4')
   }
 }
+}

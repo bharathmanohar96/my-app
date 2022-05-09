@@ -4,8 +4,7 @@ pipeline {
   stages {
     stage('Maven Build') {
       steps {
-        sh "echo jenkins demo"
-        sh "echo the job URL $JOB_URL"
+        sh "mvn clean package"
       } 
     }
      stage('tomcat deploy') {
